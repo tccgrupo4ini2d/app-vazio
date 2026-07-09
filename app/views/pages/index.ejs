@@ -1,13 +1,318 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Work</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeWork</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .navbar {
+      background-color: white;
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+
+    .navbar .logo span {
+      color: #22a83e;
+    }
+
+    .navbar .links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar .links a:hover {
+      color: #22a83e;
+    }
+
+    .navbar .botoes a {
+      margin-left: 10px;
+      padding: 8px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-entrar {
+      background-color: black;
+      color: white;
+      border: 2px solid black;
+    }
+
+    .btn-entrar:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .btn-cadastrar {
+      background-color: white;
+      color: #22a83e;
+      border: 2px solid #22a83e;
+    }
+
+    .btn-cadastrar:hover {
+      background-color: #22a83e;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      background-color: #22a83e;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .busca {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .busca input {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      width: 220px;
+      transition: all 0.3s ease;
+    }
+
+    .busca input:focus {
+      outline: none;
+      border-color: #22a83e;
+      box-shadow: 0 0 8px rgba(34, 168, 62, 0.2);
+    }
+
+    .busca button {
+      padding: 8px 20px;
+      background-color: #22a83e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .busca button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .vagas {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    }
+
+    .vagas h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    }
+
+    .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 20px;
+    min-height: 200px;
+    transition: all 0.3s ease;
+    }
+
+    .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-color: #22a83e;
+    }
+
+    .card h3 {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #555;
+      margin: 4px 0;
+    }
+
+    .card .empresa {
+      font-weight: bold;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .card .salario {
+      color: #22a83e;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .card button {
+      margin-top: 12px;
+      width: 100%;
+      padding: 8px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #22a83e;
+      transform: scale(1.03);
+    }
+
+    footer {
+      background-color: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    
-    <a href="/adm">eae</a>
+
+  <div class="navbar">
+    <a href="#" class="logo">Code<span>Work</span></a>
+    <div class="links">
+      <a href="#">Vagas</a>
+      <a href="#">Empresas</a>
+    </div>
+    <div class="botoes">
+      <a href="#" class="btn-entrar">Entrar</a>
+      <a href="#" class="btn-cadastrar">Cadastrar</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>Encontre o trabalho que você precisa!</h1>
+    <div class="busca">
+      <input type="text" placeholder="Trabalho ou empresa" />
+      <input type="text" placeholder="Presencial ou remoto" />
+      <button>Buscar Vagas</button>
+    </div>
+  </div>
+
+  <div class="vagas">
+    <h2>Vagas Em Destaque</h2>
+    <div class="cards">
+
+      <div class="card">
+        <h3>Engenheiro de Dados Júnior</h3>
+        <p>Remoto</p>
+        <p class="empresa">Leega Consultoria</p>
+        <p class="salario">R$4.500,00</p>
+        <button>Candidatar-se</button>
+      </div>
+
+      <div class="card">
+        <h3>Desenvolvedor(a) Back-End Júnior</h3>
+        <p>Híbrido</p>
+        <p class="empresa">Compass UOL</p>
+        <p class="salario">R$6.500,00</p>
+        <button>Candidatar-se</button>
+      </div>
+
+      <div class="card">
+        <h3>Analista de Segurança da Informação Sênior</h3>
+        <p>Presencial</p>
+        <p class="empresa">Banco BV</p>
+        <p class="salario">R$19.000,00</p>
+        <button>Candidatar-se</button>
+      </div>
+
+      <div class="card">
+        <h3>Engenheiro(a) de Software</h3>
+        <p>Presencial</p>
+        <p class="empresa">Zup Innovation</p>
+        <p class="salario">R$11.200,00</p>
+        <button>Candidatar-se</button>
+      </div>
+
+      <div class="card">
+        <h3>Desenvolvedor Front-End</h3>
+        <p>Remoto</p>
+        <p class="empresa">TOTVS</p>
+        <p class="salario">R$5.800,00</p>
+        <button>Candidatar-se</button>
+      </div>
+
+      <div class="card">
+        <h3>Analista de Sistemas</h3>
+        <p>Híbrido</p>
+        <p class="empresa">Stefanini</p>
+        <p class="salario">R$7.200,00</p>
+        <button>Candidatar-se</button>
+      </div>
+
+      <div class="card">
+        <h3>UI/UX Designer</h3>
+        <p>Remoto</p>
+        <p class="empresa">CI&T</p>
+        <p class="salario">R$6.900,00</p>
+        <button>Candidatar-se</button>
+      </div>
+
+      <div class="card">
+        <h3>Desenvolvedor Full Stack</h3>
+        <p>Presencial</p>
+        <p class="empresa">Accenture</p>
+        <p class="salario">R$8.500,00</p>
+        <button>Candidatar-se</button>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2024 CodeWork — Todos os direitos reservados</p>
+  </footer>
 
 </body>
 </html>
